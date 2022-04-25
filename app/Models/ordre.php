@@ -20,6 +20,7 @@ class ordre extends Model
         'total_pris',
         'moms',
         'fragt',
+        'user_id'
     ];
 
     public function user()
