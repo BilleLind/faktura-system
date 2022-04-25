@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FakturaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('faktura', [FakturaController::class, 'faktura']);
+
+Route::post('/faktura', [FakturaController::class, 'gemFaktura']);
