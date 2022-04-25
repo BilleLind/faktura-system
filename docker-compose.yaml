@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   db:
-    container_name: db_container
+    container_name: faktura_db
     image: postgres:alpine
     environment:
       POSTGRES_DB: ${DB_DATABASE}
@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
 
   pgadmin:
-    container_name: admin_container
+    container_name: faktura_admin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
