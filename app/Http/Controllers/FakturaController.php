@@ -16,7 +16,7 @@ class FakturaController extends Controller
     {
         $user = User::find(1);
 
-        $produkter = Produkt::all();
+        $produkter = Produkt::take(5)->get();
 
         return view('faktura', ['user' => $user, 'produkter' => $produkter]);
     }
