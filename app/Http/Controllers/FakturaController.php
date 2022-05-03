@@ -44,7 +44,7 @@ class FakturaController extends Controller
         }
     
         $ordre->save();
-        /* eftersom navn og addresse er tilsendt til den tidligere view, genanvendes dette. Jeg havde lidt problemer med at få samlet navn og addresse under et  user array */
+        /* eftersom navn og addresse er tilosendt til den tidligere view, genanvendes dette. Jeg havde lidt problemer med at få samlet navn og addresse under et  user array */
         $pdf = PDF::loadView('pdfs.faktura', ['ordre' => $ordre, 'produkter' => $ordre->produkter, 'navn' => $request->navn, 'addresse' => $request->addresse]);
 
         return $pdf->stream('pdfs.faktura');
